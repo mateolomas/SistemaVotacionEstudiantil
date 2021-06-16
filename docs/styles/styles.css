@@ -1,12 +1,11 @@
 
-
-
 body {
     background-color: #00afe6;
-    font-family: sans-serif;
+    font-family: Inter;
     color: white;
     
 }
+
 
 
 #logoyt {
@@ -25,15 +24,11 @@ body {
 }
 
 
-.welcome {
-    padding: 3em;
-    font-style: sans-serif;
-}
 
-.container {
+#container {
     position: fixed;
     top:0;
-    left: 0;
+    left: 280px;
     width: 100%;
     height: 100%;
     
@@ -88,5 +83,131 @@ footer {
     color: rgb(227, 230, 245);
     font-size: 8px;
     margin:auto;
+
+}
+
+
+
+
+
+#sidebar {
+    width: 200px;
+    background: #161624;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: -200px;
+    transition: left 0.5s ease;
+    border-radius: 10px
+  }
+  
+  #sidebar.visible {
+    left: 0px;
+    transition: left 0.7s ease;
+  }
+  
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+    padding: 10px 0px 10px 0px;
+    background: #161624;
+    text-align: center;
+    border-bottom: 5px solid #161624;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius:2cm
+  }
+  
+  #sidebar-btn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 15px;
+    cursor: pointer;
+    margin: 20px;
+    position: absolute;
+    right: -60px;
+    top: 0px;
+  }
+  
+  #sidebar-btn span {
+    background-color:white;
+    height: 1px;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #sidebar-btn span:nth-child(2) {
+    width: 75%;
+  }
+
+#sidebar-header {
+    width: 50%;
+position: center;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 92%}
+
+
+#user {
+    position: absolute;
+    left: 7.91%;
+    right: 7.91%;
+    top: 85%;
+    bottom: 5%;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8.52083px;
+    height: 10%;
+
+}
+
+#imguser {
+    position: absolute;
+left: 7.14%;
+right: 7.14%;
+top: 15%;
+bottom: 7.14%;
+border-radius: 50%;
+width: 25%;
+
+}
+
+#user span:nth-child(1) {
+    position: absolute;
+    width: 70px;
+    height: 15px;
+    left: 55px;
+    bottom: 32px;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 9px;
+    
+
+    color: #FFFFFF;
+}
+
+#user span:nth-child(2) {
+    position: absolute;
+    width: 70px;
+    height: 15px;
+    left: 63px;
+    bottom: 50px;
+    font-family: Inter;
+    
+    font-weight: lighter;
+    font-size: 8px;
+    
 
 }
