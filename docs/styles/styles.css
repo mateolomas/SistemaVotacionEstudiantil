@@ -116,12 +116,12 @@ footer {
     list-style: none;
     padding: 10px 0px 10px 0px;
     background: #161624;
-    text-align: center;
     border-bottom: 5px solid #161624;
   }
   
   li a {
     text-decoration: none;
+    font-size: 14px;
     color: rgb(255, 255, 255);
     border-radius:2cm
   }
@@ -144,6 +144,7 @@ footer {
     display: block;
     margin-bottom: 5px;
   }
+
   
   #sidebar-btn span:nth-child(2) {
     width: 75%;
@@ -151,12 +152,8 @@ footer {
 
 #sidebar-header {
     width: 50%;
-position: center;
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 92%}
-
+    margin-left: 50px;
+}
 
 #user {
     position: absolute;
@@ -179,6 +176,7 @@ top: 15%;
 bottom: 7.14%;
 border-radius: 50%;
 width: 25%;
+
 
 }
 
@@ -212,4 +210,9 @@ width: 25%;
     font-size: 8px;
     
 
+}
+
+i {
+    margin-right: 10px;
+    margin-left: 10px
 }
