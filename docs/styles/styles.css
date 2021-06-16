@@ -19,6 +19,11 @@ body {
     
 }
 
+#logomate {
+    position: absolute;
+
+}
+
 
 .welcome {
     padding: 3em;
@@ -66,3 +71,22 @@ body {
 }
 
 
+
+
+#logomate {
+    background-color: #00afe6;
+    position: absolute;
+    width: 11%;   
+    
+}
+footer {
+    margin-top: 2em
+}
+#footer-text{
+    
+    font-family: sans-serif;
+    color: rgb(227, 230, 245);
+    font-size: 8px;
+    margin:auto;
+
+}
