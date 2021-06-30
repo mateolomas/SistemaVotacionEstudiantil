@@ -1,0 +1,159 @@
+
+
+* {
+	margin:0;
+	padding:0;
+}
+
+html {
+
+height: 100%;
+
+}
+
+
+body {
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	height: 100%;
+    margin: 0px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+
+.logoEsc {
+    width: 15%;
+}
+
+header {
+    background-color: #F0F2FA;
+    
+    
+}
+
+#welcome {
+   
+	margin-top: -60px;
+    width: 50%;
+    padding: 10%;
+    color: white;
+    font-size: 60px;
+	opacity: 1;
+
+}
+
+.butonprincipal {
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+.footer_container {
+    
+    
+    background-color: #444444;
+	color: white;
+	font-size: small;
+	padding: 20px;
+	margin-top: auto
+}
+
+
+
+#procced {
+    
+    color: rgb(0, 0, 0);
+    height: 10%;
+    margin-left: 65%;
+    padding: 10%;
+    margin-top: -35%;
+    padding-left: 0;   
+}
+
+.butonprincipal:hover {
+    background-color: #46A2FD;   
+}
+.botones {
+    margin-top: 70px;
+}
+
+
+.contenedor__todo {
+	background-image: url("/docs/media/yachay/45796359891_89f3821471_o.jpeg");
+	
+	background-size: cover;
+	
+	height: 100%;
+}
+
+#contenedor__login__register {
+	/*position: relative;*/
+	display: block;
+	max-width:380px;
+	align-items: center;
+	margin-left: 64%;
+	margin-top: -28%;
+	margin-bottom: 20px;
+	
+}
+
+#contenedor__login__register form{
+	
+	margin: 0;
+	width: 100%;
+	
+	background-color: #F0F2FA;
+	padding: 30px 20px;
+	border-radius: 30px
+}
+
+#contenedor__login__register form h2{
+	font-size: 30px;
+	text-align: center;
+	margin-top: 20px;
+	color:#46A2FD;
+}
+
+#contenedor__login__register form input{
+	
+	width: 100%;
+	margin-top: 30px;
+	padding: 5px 10px;
+	border: none;
+	background: #f2f2f2;
+	font-size: 16px;	 
+	
+}
+
+#contenedor__login__register form button{
+	padding: 15px 35px;
+	margin-top: 20px;
+	margin-left: 40px;
+	border: none;
+	border-radius: 30px;
+	background: #46A2FD;
+	color: white;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+
+  
+#Formulario_login{
+	display: none;
+}
+
+#Formulario_register{
+	display: none;
+}
+
+
+
+

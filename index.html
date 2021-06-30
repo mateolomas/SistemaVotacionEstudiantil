@@ -4,55 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="docs/styles/styles.css">
+    <title>Sistema de Votacion Estudiantil Yachay Tech - SVE </title>
+    <link rel="stylesheet" type="text/css" href="docs/styles/register.css">
+    <link rel="stylesheet" type="text/css" href="docs/styles/styleprincipal.css">
+    
+    <script src="docs/scripts/script.js"></script>
 </head>
 <body>
-    <div class="logo">
-        <img id="logoyt" src="docs/media/LOGOYT.jpeg"></img>
-        
-    </div>
+    <header>
+        <img class="logoEsc" src="/docs/media/yachay_verde.png" >
+        <img class="logoEsc" src="/docs/media/escuela_ibio.png" >
+        <img class="logoEsc" src="/docs/media/escuela_ifisica.png" >
+        <img class="logoEsc" src="/docs/media/escuela_igeo.png" >
+        <img class="logoEsc" src="/docs/media/escuela_imath.png" >
+        <img class="logoEsc" src="/docs/media/escuela_iquim.png" >
+    </header>
     
-    <div class="welcome">
+    
+        <div class="contenedor__todo">
 
-        <center>
-            Bienvenido al Sistema de Votacion Estudiantil
-            <br>
-            Entra a tu cuenta para continuar
-        </center>
-    </div>
+          
 
-  
-         <div class="sign">
+            <div id="welcome">    
+                Bienvenido al Sistema de Votacion Estudiantil Yachay Tech 
+            </div>
+
          
-            <div id="sign_elements">
-
-                <p style="margin-bottom: 8px;">Email</p>
-                <input type="email" style="width: 100%; border: none; padding: 8px; background-color: rgba(128, 128, 128, 0.194)">
-                <p style="margin-bottom: 8px;">Password</p>
-                <input type="password" style="width: 100%;border: none; padding: 8px; background-color: rgba(128, 128, 128, 0.194)">
-                <br>
-                <br>
-                <a href="https://credentials.yachaytech.edu.ec/pwm/public/forgottenpassword">Me olvide mi contraseña</a>
-                <br>
-                <br>
-                <input type="checkbox">Mantenerme Logueado</input>
-                <br>
-                <br>
-                <button type="button" id="btn-sign" onclick="location.href='main.html'"> Login</button>
-        </div>
         
+            <div id="procced">
+                
+                <div class="botones">
+                <span>Selecciona para continuar...</span><br><br>
+                <button class="butonprincipal" id="loginb" onclick="login()" >Iniciar Sesion</button>
+                <button class="butonprincipal" id="signb" onclick="registrarse()">Actualizar Datos</button>
+                </div>
+                
+            </div>
+        
+    
 
-        </div>
+        <div id="contenedor__login__register">
 
-        <footer class="footer">
-            <p id="footer-text">This Website was made by:</p>
-                <img id="logomate" src="docs/media/logomate.png"></img>
+            <form action="/docs/pages/dashboard.html" id ="Formulario_login">
+                <h2>Iniciar sesion</h2>
+                <input type="text" placeholder="Correo Electronico">
+                <input type="password" placeholder="Contraseña">
+                <button id="entrar"  >Entrar</button>
+                <button onclick="back()" >Back</button>
+
+            </form>
+
+            <form  id="Formulario_register"> 
+                <h2> Actualiza tus datos</h2>
+                <input type="text"  placeholder="Nombre Completo">
+                <input type="text" placeholder="Correo Electronico">
+                <input type="text" placeholder="Usuario">
+                <input type="password" placeholder="Contraseña">
+                <button id ="registrar"> Registrarse</button>
+                <button onclick="back()" >Back</button>
+
+            </form>
+
+            </div>
+
+           
+      </div>
+
+      <footer >
+          <div class="footer_container">
+            Contact
+        <nav>
+            <ul>
+                <li>Facebbok</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
             
-        </footer>
-  
+            </ul>
+
+        </nav>
+
+          </div>
+        
+    </footer>
 
 
 
+ 
+    
 </body>
 </html>

@@ -1,0 +1,33 @@
+<script id="jquery">
+              $(document).ready(function() {
+  $('#sidebar-btn').on('click', function() {
+    $('#sidebar').toggleClass('visible');
+    
+  });
+});
+        
+    </script>
+
+
+
+
+  function toggleNav(){
+            if(document.getElementById("sidebar").style.width == "200px"){
+                collapseNav();
+            }
+            else{
+                expandNav();
+            }
+            
+        }
+        function expandNav(){
+            document.getElementById("sidebar").style.width = "200px";
+            document.getElementById("container").style.left = "250px";
+        }
+        
+        function collapseNav() {
+            document.getElementById("sidebar").style.width = "50px";
+            document.getElementById("container").style.left = "100px";
+
+
+        }
