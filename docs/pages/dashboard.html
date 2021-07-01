@@ -12,15 +12,43 @@
     <script rel="script" src="../scripts/jquery-3.6.0.min.js"></script>
 
     <script rel="script" src="../scripts/script.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Validos', 'Blanco', 'Nulos'],
+          ['Hombre', 250, 200, 10],
+          ['Mujer', 400, 100, 5],
+          ['Otro', 10, 1, 0]
+          
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Actualizado: 23:17 pm',
+            
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
 </head>
 <body id="main" onload="expandNav()">
     <header>
         <div id="whiteheader">
-            <div><input id="search" value="Necesitas ayuda?" style="font-weight: lighter; color: rgba(128, 128, 128, 0.712); width: 30%; border: none; border-radius: 15px; padding: 8px; background-color: rgba(128, 128, 128, 0.194)"></div>
+            <div><input id="search" placeholder="Necesitas ayuda?" style="font-weight: lighter; color: rgba(128, 128, 128, 0.712); width: 30%; border: none; border-radius: 15px; padding: 8px; background-color: rgba(128, 128, 128, 0.194)"></div>
 
         </div>
         
     </header>
+    <span id="dash">Dashboard</span><br>
     
         <div id="sidebar">
             <ul>
@@ -70,39 +98,42 @@
             
         
     
-
-    <div id="container">
+    
+    <div class="container">
     
     
-    <span id="dash" style="left: 10px;top: 60.217px;">Dashboard</span>
-    <div class="quickstats" style="margin-top: 64px;margin-left: -11px;">
-        <div id="candidates" class="quickstats">
-            This have to show the candidates stats
+    
+    
+        <div  id="candidates" class="quickstats">
+        <img style="width: 50px; border: 1; position: relative;" src="/docs/media/icons/153-bar-chart-growth-outline.gif">
+        <span>1500</span>
+         <span>Inscritas en el patron electoral.</span>
         </div>
 
         <div id="votes" class="quickstats">
-            This have to show the votes stats
+            <img style="width: 50px;" src="/docs/media/icons/17-avatar-man-nodding-outline.gif">
+            <span>86</span>
+            
+            <span>Han votado</span>
         </div>
         
         <div id="votesleft" class="quickstats">
-            This will count how many votes are left
+            <img style="width: 50px;" src="/docs/media/icons/69-eye-outline.gif">
+            <span>1414</span>
+            <span>Ausencia</span>
         </div>
         
        
         
-    </div>
-        
-        
     
-
-    
-
-
-
-       
-
 
     </div>
     
+
+    <div id="graph">
+        <div id="barchart_material" style="width: 900px; height: 500px;"></div>
+        
+
+    </div> 
 </body>
 </html>
