@@ -1,0 +1,102 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	
+}
+
+body{
+	/*background-image: url(../media/main-banner.png);
+	background-size: cover;   /*se adapte el tamño */ 
+	background-repeat: no-repeat;   /*  no se repita */ 
+
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.candidatos div {
+    width: 1295px;
+    float: right;
+      /*text-align: center;*/
+
+    }
+
+#Imagen_fondoI{
+    width: 100%;
+
+}
+
+#imagen_header {
+    width: 30%;
+    }
+
+    
+
+.descripcion_y_botones button{
+    float: right;
+    width: 50%
+}
+
+.candidatosdes figure{
+    float: left;
+    width: 200px;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    font-size: 20px;
+    color:black;
+    font-weight:900;
+
+
+}    
+
+.descripcion_y_botones h3 {
+	text-align: center;
+	font-size: 48px;
+	color:#191930;
+} 
+
+.descripcion_y_botones p{
+	font-size: 16px;
+	color: black;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+
+.descripcion_y_botones button {
+	height: 60px;	
+	background: #EBE8E8;
+	border-radius: 10px;
+	font-size: 24px;
+	color: black;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	align-content: center;
+	/*document.all[71].style.background= "red";*/
+}
+
+
+#btn_lista2{
+	background: #B11F1F;
+	color:white;
+}
+
+.candidatosdes h5 {
+	color: #191930;
+	text-align: center;
+	font-size: 30px;
+	margin-top: 30px;
+}
+
+.candidatosdes p {
+	color:black;
+	font-size: 20px
+}
+
+#sidebar,#iconsidebar{
+	position: fixed;
+	
+}
+
