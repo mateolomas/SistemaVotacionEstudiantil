@@ -1,0 +1,32 @@
+
+#containerVoto {
+    width: 100%;
+}
+
+#verificacion input {
+    padding: 10px;
+} 
+
+#verificacion {
+    margin-bottom: 40px;
+    display: block;
+}
+
+#verificacion {
+    display: inline-block;
+    padding: auto;
+    margin: 100px 300px;
+    color: black;
+    display: block;
+    
+}
+
+#buttonVoto {
+    
+    border-radius: 2em;
+    padding: 20px;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    background-color: #3ba7ba;
+    transform: translateX(400px);
+}

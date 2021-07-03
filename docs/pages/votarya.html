@@ -6,14 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles_votarya.css">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6b41f4b4ea.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script rel="script" src="../scripts/jquery-3.6.0.min.js"></script>
-
     <script rel="script" src="../scripts/script.js"></script>
+    <script>
+        function ShowAlert(){
+            swal("Procediendo a votar", "Tu voto es secreto y confidencial, no des tus contraseñas a nadie, ni reveles tu voto. Porfavor, verifica tus datos en el siguiente menu, si hay algo incorrecto no dudes en contactar lo mas rapido posible a Registros Academicos");
+        }
+    </script>
 </head>
-<body id="main" onload="expandNav()">
+<body id="main" onload="ShowAlert()">
     <header>
         <div id="whiteheader">
             <div><input id="search" value="Necesitas ayuda?" style="font-weight: lighter; color: rgba(128, 128, 128, 0.712); width: 30%; border: none; border-radius: 15px; padding: 8px; background-color: rgba(128, 128, 128, 0.194)"></div>
@@ -71,36 +78,73 @@
         
     
 
-    <div id="container">
-    
-    
-    <span id="dash" style="left: 10px;top: 60.217px;">Dashboard</span>
-    <div class="quickstats" style="margin-top: 64px;margin-left: -11px;">
-        <div id="candidates" class="quickstats">
-            This have to show the candidates stats
+    <div id="containerVoto">
+        <div id="verificacion" >
+            <!--Luego se cambia con los datos de la database-->
+            <h1>Informacion del Estudiante</h1>
+            <h6>Toca sacar de la base de datos :'v</h6>
+            <label>Cedula</label>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+            <label>Nombres</label>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+            <span>Apellidos</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+            <span>Nacionalidad</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+
+            <span>Etnia</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+
+            <span>Estado Civil</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+
+            <span>Sexo</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+
+            <span>Genero</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+
+
+            <h2>Lugar de Nacimiento</h2>
+            <span>Pais de Nacimiento</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+
+            <span>Provincia</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+
+            <span>Canton</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+
+            <span>Parroquia</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+
+            <span>Fecha de Nacimiento</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+
+            <span>Edad</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+
+
+            <h2>Direccion Domiciliar</h2>
+            <span>Calle1</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+            <span>Calle2</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+            <span>Barrio</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+            <span>Referencia</span>
+            <input placeholder="1004295638" type="text" readonly="readonly">
+
+
+            <h2>Direccion de Voto</h2>
+            <h5>Tu estas ubicado en...</h5>
+            <input placeholder="1004295638" type="text" readonly="readonly">        
+            <br>
+                 
+            <button id="buttonVoto">Proceder con el Voto</button>    
+
         </div>
-
-        <div id="votes" class="quickstats">
-            This have to show the votes stats
-        </div>
         
-        <div id="votesleft" class="quickstats">
-            This will count how many votes are left
-        </div>
-        
-       
-        
-    </div>
-        
-        
-    
-
-    
-
-
-
-       
-
 
     </div>
     
