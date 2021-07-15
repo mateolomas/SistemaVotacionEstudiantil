@@ -81,65 +81,57 @@
     <div id="containerVoto">
         <div id="verificacion" >
             <!--Luego se cambia con los datos de la database-->
-            <h1>Informacion del Estudiante</h1>
-            <h6>Toca sacar de la base de datos :'v</h6>
+    <?php 
+    include 'conexion_a_bd.php';
+    $ans = $conn->query("SELECT * from infoestud inner join nacimiento_direccion where id_est_ced='1004295729'");
+    $info = $ans->fetch_array();
+
+    echo "<h1>Informacion del Estudiante</h1>
             <label>Cedula</label>
-            <input placeholder="1004295638" type="text" readonly="readonly">
+            <span>".$info["id_est_ced"]."</span>
             <label>Nombres</label>
-            <input placeholder="1004295638" type="text" readonly="readonly">
+            <span>".$info["nombres"]."</span>
             <span>Apellidos</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
+            <span>".$info["apellidos"]."</span>
             <span>Nacionalidad</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
-
+            <span>".$info["nacionalidad"]."</span>
             <span>Etnia</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
-
+            <span>".$info["etnia"]."</span>
             <span>Estado Civil</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
-
+            <span>".$info["estado_civil"]."</span>
             <span>Sexo</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
-
+            <span>".$info["sexo"]."</span>
             <span>Genero</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
-
-
+            <span>".$info["genero"]."</span>
             <h2>Lugar de Nacimiento</h2>
-            <span>Pais de Nacimiento</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
 
+         
+            <span>Pais de Nacimiento</span>
+            <span>".$info["pais"]."</span>
+            
             <span>Provincia</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
+            <span>".$info["provincia"]."</span>
 
             <span>Canton</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
-
-            <span>Parroquia</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
+            <span>".$info["canton"]."</span>
+            
 
             <span>Fecha de Nacimiento</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
-
-            <span>Edad</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
-
+            <span>".$info["fnac"]."</span>
 
             <h2>Direccion Domiciliar</h2>
+
             <span>Calle1</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
+            <span>".$info["calle1"]."</span>
             <span>Calle2</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
-            <span>Barrio</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
+            <span>".$info["calle2"]."</span>
+            
             <span>Referencia</span>
-            <input placeholder="1004295638" type="text" readonly="readonly">
+            <span>".$info["referencia"]."</span>"
 
+        
+            ?>
 
-            <h2>Direccion de Voto</h2>
-            <h5>Tu estas ubicado en...</h5>
-            <input placeholder="1004295638" type="text" readonly="readonly">        
-            <br>
                  
             <button id="buttonVoto">Proceder con el Voto</button>    
 
