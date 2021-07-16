@@ -34,7 +34,7 @@
               <li><div><img id="sidebar-header" src="../media/yachay_verde.png"></div></li>
               <li><a href="dashboard.html">Dashboard</a></li>
               <li><a href="candidatos.html">Candidatos</a></li>
-              <li><a href="votarya.html">Votar Ya</a></li>
+              <li><a href="votarya.php">Votar Ya</a></li>
               <li><a href="estadisticas.html">Estadisticas</a></li>
               <li><a href="certificado.html">Certificado de Votacion</a></li>
               <li><div id="user">

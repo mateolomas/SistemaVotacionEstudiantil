@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <?php include "conexion_a_bd.php"?> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -103,37 +104,46 @@
     
     
     
+    <?php 
+    $ans = $conn->query("SELECT COUNT(*) as nro_Estud from infoestud");
+    $info = $ans->fetch_array();
     
-        <div  id="candidates" class="quickstats">
-        <img style="width: 50px; border: 1; position: relative;" src="/docs/media/icons/153-bar-chart-growth-outline.gif">
-        <span>1500</span>
-         <span>Inscritas en el patron electoral.</span>
-        </div>
+    $votestats = $conn->query("SELECT COUNT(already_vote) AS already from estado_votacion e inner join infoestud i on e.id_est=i.id_est_ced where already_vote=1");
+    $vote_already = $votestats->fetch_array();
 
-        <div id="votes" class="quickstats">
-            <img style="width: 50px;" src="/docs/media/icons/17-avatar-man-nodding-outline.gif">
-            <span>86</span>
-            
-            <span>Han votado</span>
-        </div>
-        
-        <div id="votesleft" class="quickstats">
-            <img style="width: 50px;" src="/docs/media/icons/69-eye-outline.gif">
-            <span>1414</span>
-            <span>Ausencia</span>
-        </div>
-        
-       
-        
+    $voteLEFT = $conn->query("SELECT COUNT(already_vote) as noready from estado_votacion e inner join infoestud i on e.id_est=i.id_est_ced where already_vote=0");
+    $vote_left = $voteLEFT->fetch_array();
+
+
     
-
+    echo "<div id='candidates' class='quickstats'>
+      <img style='width: 50px; border: 1; position: relative;' src='/docs/media/icons/153-bar-chart-growth-outline.gif'>
+      <span>".$info['nro_Estud']."</span>
+      <span>Inscritas en el patron electoral.</span>
     </div>
     
+    <div id='votes' class='quickstats'>
+    <img style='width: 50px;' src='/docs/media/icons/17-avatar-man-nodding-outline.gif'>
+    <span>".$vote_already['already']."</span>
+    
+    <span>Han votado</span>
+</div>
 
+<div id='votesleft' class='quickstats'>
+    <img style='width: 50px;' src='/docs/media/icons/69-eye-outline.gif'>
+    <span>".$vote_left['noready']."</span>
+    <span>Ausencia</span>
+</div>
+"
+    ?>
+
+
+ 
+        
+    
     <div id="graph">
         <div id="barchart_material" style="width: 900px; height: 500px;"></div>
         
-
     </div> 
 </body>
 </html>
