@@ -1,7 +1,9 @@
 <?php 
     $conn = mysqli_connect("localhost", "root", "root", "SVE_BD");
-    if(!$conn)
+    if(!$conn){
     echo "Hubo un error al conectarse a la bd";
+    exit();
+    }
     
     
 
@@ -18,7 +20,7 @@
         
         
 
-    
+   
 ?>
 
 

@@ -1,96 +1,92 @@
-
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Administracion</title>
-    <script rel="script" src="admin.js"></script>
-    <link rel="stylesheet" href="admin.css" type="text/css">
+    <meta charset="utf-8" />
+    <title>Panel de Admin</title>
+    <link rel="stylesheet" href="admin.css" type="text/css" />
     <script>
         function buscarAl() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if(this.readyState==4 && this.status==200){
-            console.log(this.responseText);
-            document.write(this.responseText);
-    
+            var xhttp = new XMLHttpRequest();
+            
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200){
+        //                    alert(xhttp.responseText);
+        document.write(xhttp.responseText);
+                    //var oJSON = JSON.parse(xhttp.responseText);
+                    //document.getElementById("inombre").value = oJSON.nombre;
+                
+            }};
+            xhttp.open(
+                "GET",
+                "get_stud.php?ced=" + document.getElementById("icedula").value,
+                true
+            );
+            xhttp.send();
         }
-    }
-    xhttp.open("POST", "get_stud.php", true);
-    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhttp.send("ced="+ document.getElementById("icedula").value);
-}  
 
+      //xhttp.open("POST", "get_stud.php", true);
+      //xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      //xhttp.send("ced="+ document.getElementById("icedula").value);
     </script>
 </head>
 
-
 <body>
     <nav>
-            <a href="https://www.yachaytech.edu.ec"><img id="logoadmin" src="../../media/escuela_imath.png"></a>
-            <a href="#">Leer Registros de estudiantes</a>  
-            <a href="#">Añadir registro al patron</a>
-            <a href="#">Actualizar Registros de Estudiantes</a>  
-            <a href="#">Eliminar Registros de Estudiantes</a>
+        <a href="https://www.yachaytech.edu.ec"><img id="logoadmin" src="../../media/escuela_imath.png" /></a>
+        <a href="#">Leer Registros de estudiantes</a>
+        <a href="#">Añadir registro al patron</a>
+        <a href="#">Actualizar Registros de Estudiantes</a>
+        <a href="#">Eliminar Registros de Estudiantes</a>
     </nav>
-    
+
     <main>
         <div id="buscar">
             <h3>Buscar estudiante</h3>
             <form>
-                <input id="icedula" type="text" placeholder="Cedula/Pasaporte">
-            
-                <input id="inombre" type="text" placeholder="Nombre">
-                <input id="iapellido" type="text" placeholder="Apellido">
-                <input id="inac" type="text" placeholder="Nacionalidad">
-                <input id="ietn" type="text" placeholder="Etnia">
-                <input id="iciv" type="text" placeholder="Estado Civil">
-                <button onclick='buscarAl()'>Buscar Estudiante</button>
+                <input id="icedula" type="text" placeholder="Cedula/Pasaporte" />
+                <button onclick="buscarAl()">Buscar Estudiante</button>
+
+                <input id="inombre" type="text" placeholder="Nombre" />
+                <input id="iapellido" type="text" placeholder="Apellido" />
+                <input id="inac" type="text" placeholder="Nacionalidad" />
+                <input id="ietn" type="text" placeholder="Etnia" />
+                <input id="iciv" type="text" placeholder="Estado Civil" />
             </form>
         </div>
 
-
-
-
-
         <div id="anadir">
             <form action="admintools/anadir_alumno.php">
-                <h3>Añadir alumno al patron electoral </h3>
-                <input type="text" placeholder="Cedula/Pasaporte">
-                <input type="text" placeholder="Nombre">
-                <input type="text" placeholder="Apellido">
+                <h3>Añadir alumno al patron electoral</h3>
+                <input type="text" placeholder="Cedula/Pasaporte" />
+                <input type="text" placeholder="Nombre" />
+                <input type="text" placeholder="Apellido" />
                 <submit type="submit">Añadir</submit>
             </form>
         </div>
 
         <div id="leer">
-            <h3>Leer todo el patron electoral </h3>
-            
+            <h3>Leer todo el patron electoral</h3>
+
             <form action="admintools/leerpatron.php"></form>
-            
         </div>
 
         <div id="actualizar">
-            <h3>Actualizar alumno </h3>
-            <form >
-                <input type="text" placeholder="Cedula/Pasaporte">
-                <input type="text" placeholder="Cedula/Pasaporte">
-                <input type="text" placeholder="Nombre">
-                <input type="text" placeholder="Apellido">
+            <h3>Actualizar alumno</h3>
+            <form>
+                <input type="text" placeholder="Cedula/Pasaporte" />
+                <input type="text" placeholder="Cedula/Pasaporte" />
+                <input type="text" placeholder="Nombre" />
+                <input type="text" placeholder="Apellido" />
             </form>
         </div>
-
 
         <div id="Eliminar">
             <h3>Eliminar alumno del patron</h3>
             <form>
-                <input type="text" placeholder="Cedula/Pasaporte">
+                <input type="text" placeholder="Cedula/Pasaporte" />
             </form>
         </div>
     </main>
-
-    
 </body>
 
 </html>
