@@ -5,24 +5,22 @@
     <title>Panel de Admin</title>
     <link rel="stylesheet" href="admin.css" type="text/css" />
     <script>
-        function buscarAl() {
-            var xhttp = new XMLHttpRequest();
-            
-            xhttp.onreadystatechange = function () {
-                if (xhttp.readyState == 4 && xhttp.status == 200){
-        //                    alert(xhttp.responseText);
-        document.write(xhttp.responseText);
-                    //var oJSON = JSON.parse(xhttp.responseText);
-                    //document.getElementById("inombre").value = oJSON.nombre;
-                
-            }};
-            xhttp.open(
-                "GET",
-                "get_stud.php?ced=" + document.getElementById("icedula").value,
-                true
-            );
-            xhttp.send();
-        }
+         function buscarAl() {
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function () {
+    if(this.readyState == 4 && this.status == 200) {
+        
+        oJSON = JSON.parse(this.responseText);
+        document.getElementById("inombre").value = oJSON.nombre;
+    }
+
+
+}
+xhttp.open("GET", "get_stud.php?cd="+document.getElementById("icedula").value, true);
+xhttp.send();
+}
+
 
       //xhttp.open("POST", "get_stud.php", true);
       //xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -42,16 +40,18 @@
     <main>
         <div id="buscar">
             <h3>Buscar estudiante</h3>
-            <form>
-                <input id="icedula" type="text" placeholder="Cedula/Pasaporte" />
+            
+                
+                <input type="text" name="icedula" id="icedula" placeholder="Cedula">
+                <input id="inombre" placeholder="Nombres">
                 <button onclick="buscarAl()">Buscar Estudiante</button>
 
-                <input id="inombre" type="text" placeholder="Nombre" />
+                
                 <input id="iapellido" type="text" placeholder="Apellido" />
                 <input id="inac" type="text" placeholder="Nacionalidad" />
                 <input id="ietn" type="text" placeholder="Etnia" />
                 <input id="iciv" type="text" placeholder="Estado Civil" />
-            </form>
+            
         </div>
 
         <div id="anadir">
