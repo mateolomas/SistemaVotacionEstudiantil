@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	
+}
+
+body{
+	background-image: url("../media/candidatos_lista_1/fondo_votar.jpeg");
+	background-size: cover;   /*se adapte el tamño */ 
+	background-repeat: no-repeat;   /*  no se repita */ 
+
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.fondo div {
+    width: 1295px;
+    float: right;
+
+      /*text-align: center;*/
+
+    }
+.listas {
+	max-width: 150px;
+	max-height: 500px;
+	background-color: red;
+}
