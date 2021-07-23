@@ -1,0 +1,141 @@
+*{
+			margin:0;
+			padding: 0;
+
+		}
+
+		body{
+		background-image: url("../media/fondo.jpg");
+		background-size: cover;   /*se adapte el tamño */ 
+		background-repeat: no-repeat;   /*  no se repita */ 
+		background-position: center;
+		background-attachment: fixed;
+	}
+
+
+		.fondo{
+			
+			float:right; 
+			width: 1250px;
+			height: 1000px;
+    		
+		}
+
+		.elementos{
+			margin: auto;
+			width: 500px;
+			height: 800px;
+			padding: 20px;
+	
+
+		}
+
+		.lista2 {
+		
+			width: 170px;
+			height: 600px;
+			background-color: red;
+			position: absolute;
+			margin-left: 290px;
+			margin-top: 20px;
+			background: #FFFFFF;
+			border: 3px solid #46ACE4;
+			box-sizing: border-box;
+			border-radius: 50px;
+		}
+
+		.lista1 {
+
+			margin-left:20px; 
+			width: 170px;
+			height: 600px;
+			background-color: green;
+			margin-top: 20px;	
+			background: #FFFFFF;
+			border: 3px solid #46ACE4;
+			box-sizing: border-box;
+			border-radius: 50px;
+		}
+
+		.lista1:hover {
+			background: #DBD7D7;
+			transform:scale(1.03);
+			transition: 1s;
+		}
+
+		.lista2:hover {
+			background: #DBD7D7;
+			transform:scale(1.03);
+			transition: 1s;
+		}
+		.btnvotar{
+			margin-top: 20px;
+			margin-left:125px; 
+			width: 252px;
+			height: 83px;
+			background: #070d1d;
+			border-radius: 15px;
+			cursor: pointer;
+			font-size: 30px;
+			color: white;
+		}
+		.btnvotar:hover{
+			background: #041032;
+			transform:scale(1.03);
+			transition: 1s;
+		}
+
+		.btnvatareleguir{
+			padding: 0;
+			margin:0;
+			background:url("../media/casilla_voto.png");
+		}
+		
+
+
+		h1, h6,h2,h5 {
+			text-align: center;
+			font-family: Inter;
+			font-style: normal;
+			color: #46ACE4;
+		}
+
+		h1{
+			color:#19274B;
+			line-height: 50px;
+		}
+
+		h2{
+			margin-top: 20px;
+			margin-bottom: 50px;
+		}
+		img{
+			border-radius: 100px;
+			width: 120px;
+			margin-left: 15px;
+				margin-top: 20px;
+
+		}
+
+		.#votocasilla1:hover {
+			src: "../media/voto.jpg";
+		} 
+
+		#fond2 {
+			width: 800px;
+			display: none;
+			/*margin-top: 150px;*/
+			margin:auto;
+			margin-top: 250px;
+			font-size: 30px;
+		}
+
+		#fond2 #voto{
+			color: #091260;
+			margin-left: 150px;
+			padding-left: 50px; 
+			line-height: 80px;
+			align-items: center;
+			text-align: center;
+			font-weight: bold;
+		}

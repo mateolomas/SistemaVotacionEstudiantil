@@ -1,0 +1,73 @@
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Panel de Admin</title>
+    <link rel="stylesheet" href="admin.css" type="text/css" />
+    <script rel="script" src="admin.js" type="text/javascript">
+         
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="https://www.yachaytech.edu.ec"><img id="logoadmin" src="../../media/escuela_imath.png" /></a>
+        <a href="#">Leer Registros de estudiantes</a>
+        <a href="#">Añadir registro al patron</a>
+        <a href="#">Actualizar Registros de Estudiantes</a>
+        <a href="#">Eliminar Registros de Estudiantes</a>
+    </nav>
+
+    <main>
+        <div id="buscar">
+            <h3>Buscar estudiante</h3>
+            
+                
+                <input type="text" name="icedula" id="icedula" placeholder="Cedula">
+                <input id="inombre" placeholder="Nombres">
+                <button onclick="buscarAl()">Buscar Estudiante</button>
+
+                
+                <input id="iapellido" type="text" placeholder="Apellido" />
+                <input id="inac" type="text" placeholder="Nacionalidad" />
+                <input id="ietn" type="text" placeholder="Etnia" />
+                <input id="iciv" type="text" placeholder="Estado Civil" />
+            
+        </div>
+
+        <div id="anadir">
+            <form action="admintools/anadir_alumno.php">
+                <h3>Añadir alumno al patron electoral</h3>
+                <input type="text" placeholder="Cedula/Pasaporte" />
+                <input type="text" placeholder="Nombre" />
+                <input type="text" placeholder="Apellido" />
+                <submit type="submit">Añadir</submit>
+            </form>
+        </div>
+
+        <div id="leer">
+            <h3>Leer todo el patron electoral</h3>
+
+            <form action="admintools/leerpatron.php"></form>
+        </div>
+
+        <div id="actualizar">
+            <h3>Actualizar alumno</h3>
+            <form>
+                <input type="text" placeholder="Cedula/Pasaporte" />
+                <input type="text" placeholder="Cedula/Pasaporte" />
+                <input type="text" placeholder="Nombre" />
+                <input type="text" placeholder="Apellido" />
+            </form>
+        </div>
+
+        <div id="Eliminar">
+            <h3>Eliminar alumno del patron</h3>
+            <form>
+                <input type="text" placeholder="Cedula/Pasaporte" />
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

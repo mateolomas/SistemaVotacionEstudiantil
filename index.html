@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Votacion Estudiantil Yachay Tech - SVE </title>
+    <link rel="stylesheet" type="text/css" href="docs/styles/register.css">
+    <link rel="stylesheet" type="text/css" href="docs/styles/styleprincipal.css">
+    
+    <script src="docs/scripts/script.js"></script>
+</head>
+<body>
+    <header>
+        <img class="logoEsc" src="docs/media/yachay_verde.png" >
+        <img class="logoEsc" src="docs/media/escuela_ibio.png" >
+        <img class="logoEsc" src="docs/media/escuela_ifisica.png" >
+        <img class="logoEsc" src="docs/media/escuela_igeo.png" >
+        <img class="logoEsc" src="docs/media/escuela_imath.png" >
+        <img class="logoEsc" src="docs/media/escuela_iquim.png" >
+    </header>
+    
+    
+        <div class="contenedor__todo">
+
+          
+
+            <div id="welcome">    
+                Bienvenido al Sistema de Votacion Estudiantil Yachay Tech 
+            </div>
+
+         
+        
+            <div id="procced">
+                
+                <div class="botones">
+                <span>Selecciona para continuar...</span><br><br>
+                <button class="butonprincipal" id="loginb" onclick="login()" >Iniciar Sesion</button>
+                <button class="butonprincipal" id="signb" onclick="registrarse()">Actualizar Datos</button>
+                </div>
+                
+            </div>
+        
+    
+
+        <div id="contenedor__login__register">
+
+            <form action="docs/pages/dashboard.html" id ="Formulario_login">
+                <h2>Iniciar sesion</h2>
+                <input type="text" placeholder="Correo Electronico">
+                <input type="password" placeholder="Contraseña">
+                <button id="entrar"  >Entrar</button>
+                <button onclick="back()" >Back</button>
+
+            </form>
+
+            <form action="docs/pages/dashboard.html" id="Formulario_register"> 
+                <h2> Actualiza tus datos</h2>
+                <input type="text"  placeholder="Nombre Completo">
+                <input type="text" placeholder="Correo Electronico">
+                <input type="text" placeholder="Usuario">
+                <input type="password" placeholder="Contraseña">
+                <button id ="registrar"> Registrarse</button>
+                <button onclick="back()" >Back</button>
+
+            </form>
+
+            </div>
+
+           
+      </div>
+
+      <footer >
+          <div class="footer_container">
+            Contact
+        <nav>
+            <ul>
+                <li>Facebbok</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                
+            
+            </ul>
+
+        </nav>
+
+          </div>
+        
+    </footer>
+
+
+
+ 
+    
+</body>
+</html>

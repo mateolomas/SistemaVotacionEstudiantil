@@ -1,0 +1,101 @@
+:root {
+    
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin-top: 0px;
+    margin-left: 0px;
+    
+}
+header {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    margin-left: 5rem;
+}
+
+#searchbox{
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    width: 50%;
+    margin: 10px 5px 5px 15px;
+    background-color: white;
+}
+
+
+main {
+    
+    margin-left: 5rem;
+    padding: 1rem;
+    
+}
+
+.navbar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color:  #161624;
+    transition: 200ms ease;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+}
+
+
+
+.nav-item {
+    
+width: 100%;
+
+}
+i {
+    margin-left: 2rem;
+}
+
+
+.nav-item:last-child {
+    margin-top: auto;
+    
+}
+ 
+
+.nav-link {
+    display:flex;
+    align-items: center;
+    height: 5rem;
+    color: white;
+}
+
+.navbar:hover {
+    display: block;
+    width: 16rem
+}
+.navbar:hover .link-text {
+    display: block;
+}
+
+.nav-link:hover {
+    background-color: black;
+    color: white;
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+#ilogo {
+    width: 75px;
+}
+

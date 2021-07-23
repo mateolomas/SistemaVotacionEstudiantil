@@ -1,0 +1,37 @@
+body {
+    background-color:rgb(255, 255, 255);
+}
+
+nav {
+    position: absolute;
+    display: flex;
+    flex-direction:column;
+    width: 20%;
+    height: 100%;
+    background-color:midnightblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: 0;
+    left: 0;
+}
+
+#logoadmin {
+    width: 100%;
+}
+a {
+    padding: 0.5em;
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+    
+}
+
+main {
+    margin-left: 25%;
+}
+
+input {
+    padding: 8px;
+    margin: 0.5em;
+    border: 0;
+    border-radius: 10px;
+}
