@@ -9,29 +9,40 @@
     </script>
 </head>
 
-<body>
+<body onload="hidemain()">
     <nav>
         <a href="https://www.yachaytech.edu.ec"><img id="logoadmin" src="../../media/escuela_imath.png" /></a>
-        <a href="#">Leer Registros de estudiantes</a>
-        <a href="#">Añadir registro al patron</a>
-        <a href="#">Actualizar Registros de Estudiantes</a>
-        <a href="#">Eliminar Registros de Estudiantes</a>
+        <a onclick="leerf()">Leer Registros de estudiantes</a>
+        <a onclick="findf()">Buscar estudiantes</a>
+        <a onclick="anadirf()">Añadir registro al patron</a>
+        <a onclick="actualf()">Actualizar Registros de Estudiantes</a>
+        <a onclick="eliminarf()">Eliminar Registros de Estudiantes</a>
+        <a onclick="cargarf()">Cargar csv or xml</a>
     </nav>
 
-    <main>
+    <main >
+
+        <div>
+            <h1>Panel de Administracion del Sistema de Votacion Estudiantil</h1>
+            <h2>En tu izquierda puedes encontrar las opciones para manejar la base de datos.</h2>
+            
+
+        </div>
+
+
+
         <div id="buscar">
             <h3>Buscar estudiante</h3>
             
-                
+        
                 <input type="text" name="icedula" id="icedula" placeholder="Cedula">
+                <h4>Resultado: </h4>
                 <input id="inombre" placeholder="Nombres">
-                <button onclick="buscarAl()">Buscar Estudiante</button>
-
-                
                 <input id="iapellido" type="text" placeholder="Apellido" />
                 <input id="inac" type="text" placeholder="Nacionalidad" />
                 <input id="ietn" type="text" placeholder="Etnia" />
                 <input id="iciv" type="text" placeholder="Estado Civil" />
+                <button onclick="buscarAl()">Buscar Estudiante</button>
             
         </div>
 
@@ -67,6 +78,14 @@
                 <input type="text" placeholder="Cedula/Pasaporte" />
             </form>
         </div>
+
+        <div id="cargarExcel">
+            <h3>Cargar Patron desde excel (csv)</h3>
+            <form>
+                <input type="text" placeholder="Cedula/Pasaporte" />
+            </form>
+        </div>
+
     </main>
 </body>
 
