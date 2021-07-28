@@ -1,5 +1,6 @@
 body {
     background-color:rgba(230, 222, 222, 0.55);
+    background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
 }
 button, submit {
     border-radius: 10px;
