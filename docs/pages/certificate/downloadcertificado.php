@@ -24,7 +24,7 @@ $certificado->renderCampo($etiquetaCert, $certificacion);
 $certificado->renderAutoridad($autoridad, $EtiquetaAutoridad);
 $certificado->Image("firma.png", 10,165,40);
 
-$certificado->Output();
+$certificado->Output("certificadoVotacion.pdf", 'D');
 
 
 
