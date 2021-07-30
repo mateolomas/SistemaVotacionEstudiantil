@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    
     <link rel="stylesheet" href="../styles/styles_votarya.css">
+    <link rel="stylesheet" href="../styles/navstyle.css">
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
@@ -20,61 +21,28 @@
         }
     </script>
 </head>
-<body id="main" onload="ShowAlert()">
-    <header>
-        <div id="whiteheader">
-            <div><input id="search" value="Necesitas ayuda?" style="font-weight: lighter; color: rgba(128, 128, 128, 0.712); width: 30%; border: none; border-radius: 15px; padding: 8px; background-color: rgba(128, 128, 128, 0.194)"></div>
+<body onload="ShowAlert()">
+          <nav class="navbar">
+              <ul class="navbar-nav">
+                <li class="logo"><a class="nav-link" href="#"><img id="ilogo" src="../media/yachay_verde.png"></a></li>
+                <li class="nav-item"><a class="nav-link" href="dashboard.php">     <i class="fas fa-home icons"></i>   <span class="link-text">Dashboard</span>    </a></li>
+                <li class="nav-item"><a class="nav-link" href="candidatos.html">   <i class="fas fa-user-friends icons"></i> <span class="link-text">Candidatos</span>   </a></li>
+                <li class="nav-item"><a class="nav-link" href="votarya.php">       <i class="fas fa-vote-yea icons"></i> <span class="link-text">Vota ya!</span>     </a></li>
+                <li class="nav-item"><a class="nav-link" href="estadisticas.html"> <i class="fas fa-poll icons"></i>     <span class="link-text">Estadisticas</span> </a></li>
+                <li class="nav-item"><a class="nav-link" href="certificado.php">  <i class="far fa-id-card icons"></i>  <span class="link-text">Certificado</span>  </a></li>
 
-        </div>
-        
-    </header>
-    
-        <div id="sidebar">
-            <ul>
-              <li><div><img id="sidebar-header" src="../media/yachay_verde.png"></div></li>
-              <li><a href="dashboard.html">Dashboard</a></li>
-              <li><a href="candidatos.html">Candidatos</a></li>
-              <li><a href="votarya.php">Votar Ya</a></li>
-              <li><a href="estadisticas.html">Estadisticas</a></li>
-              <li><a href="certificado.html">Certificado de Votacion</a></li>
-              <li><div id="user">
-                <span>Mateo Lomas</span>
-                <span>Estudiante Regular</span>
-                <img id="imguser" src="../media/userdefault.png">
-            </div></li> 
-            </ul>
-        
-            <div id="sidebar-btn" onclick='toggleNav()'>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
-            
-        
-          </div>
-          
-        <div id="iconsidebar">
-            <ul>
+                <li class="nav-item"><a class="nav-link" href="usuario.html">  <i class="fas fa-user-circle"></i>  <span class="link-text">Mateo Lomas</span>  </a></li>
                 
-                <li><span></span></li>
-                <li><span></span></li>
-                
-                
-                <br>
-                
-                <li><a href=""><i class="fas fa-home"></i></a></li>
-                
-                <li><a href=""><i class="fas fa-user-friends"></i></a></li>
-                <li><a href=""><i class="fas fa-vote-yea"></i></a></li>
-                <li><a href=""><i class="fas fa-poll"></i></a></li>
-                <li><a href=""><i class="far fa-id-card"></i></a></li>
-                 
+  
               </ul>
+        </nav>
 
-        </div>
-       
-            
+        <header>
+        
+            <input id="searchbox" placeholder="¿Necesitas ayuda?">
+          
+        </header>
+        
         
     
 

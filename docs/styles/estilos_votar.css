@@ -6,8 +6,8 @@
 
 		body{
 		background-image: url("../media/fondo.jpg");
-		background-size: cover;   /*se adapte el tamño */ 
-		background-repeat: no-repeat;   /*  no se repita */ 
+		background-size: cover;   /*se adapte el tamño  /*
+		background-repeat: no-repeat;   /*  no se repita */
 		background-position: center;
 		background-attachment: fixed;
 	}
@@ -117,7 +117,7 @@
 
 		}
 
-		.#votocasilla1:hover {
+		#votocasilla1:hover {
 			src: "../media/voto.jpg";
 		} 
 

@@ -42,7 +42,7 @@
       }
     </script>
 </head>
-<body>
+<body onload="drawChart();">
 
       <nav class="navbar">
               <ul class="navbar-nav">
@@ -72,13 +72,14 @@
     <?php
     
     
-    $ans = $conn->query("SELECT COUNT(*) as nro_Estud from infoestud");
+    $ans = $conn->query("SELECT COUNT(*) as nro_Estud from infoest");
     $info = $ans->fetch_array();
     
-    $votestats = $conn->query("SELECT COUNT(already_vote) AS already from estado_votacion e inner join infoestud i on e.id_est=i.id_est_ced where already_vote=1");
+    
+    $votestats = $conn->query("select COUNT(voto) AS already from estado_votacion where VOTO='YA VOTO'");
     $vote_already = $votestats->fetch_array();
 
-    $voteLEFT = $conn->query("SELECT COUNT(already_vote) as noready from estado_votacion e inner join infoestud i on e.id_est=i.id_est_ced where already_vote=0");
+    $voteLEFT = $conn->query("select COUNT(voto) AS noready from estado_votacion where VOTO='AUN NO VOTA'");
     $vote_left = $voteLEFT->fetch_array();
 
 
