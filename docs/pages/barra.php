@@ -10,8 +10,9 @@
       session_start();
         echo "<li class='nav-item'><a class='nav-link' href='usuario.html'>  <i class='fas fa-user-circle'></i>  <span class='link-text' id='usuario_actual'>".$_SESSION['name']." ".$_SESSION['apel']."</span>  </a></li>";
       ?>
+      <li class="nav-item"><a class="nav-link" href="../../../logout.php">  <i class="fas fa-sign-out-alt"></i>  <span class="link-text">Logout</span>  </a></li>
       
-      <a href="../../../logout.php">Logout</a>
+      
 
     </ul>
 </nav>
