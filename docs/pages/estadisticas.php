@@ -15,10 +15,29 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script rel="script" src="../scripts/jquery-3.6.0.min.js"></script>
     <script rel="script" src="../scripts/script.js"></script>
-    <script>
-        function ShowAlert(){
-            swal("Procediendo a votar", "Tu voto es secreto y confidencial, no des tus contraseñas a nadie, ni reveles tu voto. Porfavor, verifica tus datos en el siguiente menu, si hay algo incorrecto no dudes en contactar lo mas rapido posible a Registros Academicos");
-        }
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Lista 1 ',     11],
+          ['Lista 2',      2],
+          ['Ausencia', 4]
+          
+        ]);
+
+        var options = {
+          title: 'Resultados preliminares'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
     </script>
 </head>
 <body >
@@ -32,7 +51,12 @@
           
         </header>
         
-        
+        <main> 
+        <div id="piechart" style="width: 900px; height: 500px; position: relative; margin-left: 16em;"></div>
+        </main>
+
+
+
     
 
     

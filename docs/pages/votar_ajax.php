@@ -9,7 +9,9 @@
         echo  $SQL;  
     }
  	/*
+
 	<?php
+	
 	include 'conexion.php';
  	$SQL = "UPDATE alumno SET " ;
  	$SQL = $SQL."nombre='".$_REQUEST["nm"]."', "; 
