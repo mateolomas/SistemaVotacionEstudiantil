@@ -18,13 +18,13 @@
 
    <?php 
    //votos validos
-    $ans1 = $conn->query("SELECT count(*) as valid_h from infoest inner join _estado_votacion on cedula=id_ced where voto != 'AUN NO VOTA' AND genero='h'");
+    $ans1 = $conn->query("SELECT count(*) as valid_h from infoest inner join _estado_votacion on cedula=id_ced where genero='h' and (voto='lista 1' or voto='lista 2')");
     $validh = $ans1->fetch_array();
 
-    $ans2 = $conn->query("SELECT count(*) as valid_m from infoest inner join _estado_votacion on cedula=id_ced where voto != 'AUN NO VOTA' AND genero='m'");
+    $ans2 = $conn->query("SELECT count(*) as valid_m from infoest inner join _estado_votacion on cedula=id_ced where genero='m' and (voto='lista 1' or voto='lista 2')");
     $validm = $ans2->fetch_array();
 
-    $ans3 = $conn->query("SELECT count(*) as valid_o from infoest inner join _estado_votacion on cedula=id_ced where voto != 'AUN NO VOTA' AND genero='o'");
+    $ans3 = $conn->query("SELECT count(*) as valid_o from infoest inner join _estado_votacion on cedula=id_ced where genero='o' and (voto='lista 1' or voto='lista 2')");
     $valido = $ans3->fetch_array();
 
     //votos en blanco

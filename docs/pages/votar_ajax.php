@@ -1,10 +1,12 @@
 <?php
     session_start();
-	include 'conexion_a_bd.php';
- 	$SQL = "UPDATE _estado_votacion  SET voto='".$_REQUEST["voto"]."'";
-	$SQL =$SQL." where id= ".$_SESSION['id'];
+    include 'conexion_a_bd.php';
+    $voto= $_REQUEST["voto"];
+    $usr=$_SESSION['id'];
+ 	$SQL = "UPDATE _estado_votacion  SET voto='{$voto}' where id_ced= '{$usr}'";
 	if(!$conn->query($SQL)){
-        echo "no se pudo actualizar";
+        echo "error";
+        echo  $SQL;  
     }
  	/*
 	<?php
