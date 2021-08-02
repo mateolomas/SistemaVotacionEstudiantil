@@ -3,12 +3,82 @@
 <head>
   <?php include "conexion_a_bd.php"?> 
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Dashboard</title>
     <link rel="stylesheet" href="../styles/navstyle.css">
-    <link rel="stylesheet" type="text/css" href="../styles/styles_dash.css">
+    
+    <style>
 
+    body {
+    background-color:#F0F2FA;
+    }
+
+  header {
+      width: 100%;
+      height: 60px;
+      background-color: white;
+      margin-left: 5rem;
+  }
+
+    #searchbox{
+        border: none;
+        border-radius: 15px;
+        padding: 10px;
+        width: 50%;
+        margin: 10px 5px 5px 15px;
+        background-color: white;
+    }
+
+
+#barchart_material {
+   margin: 50px 0px 0px 280px;
+  width: 700px;
+  height: 400px;
+    
+  
+    }
+
+.container_stats {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    
+      
+}
+
+.quickstats {
+  width: 100%;
+  background-color: white;
+  margin-right: 15px;
+  
+}
+
+.quickstats span {
+  font-size: 50px;
+  margin: auto auto 50px 10px;
+  width: 100%;
+  
+}
+
+.quickstats p {
+  font-size: 19px;
+  margin-left: 70px;
+  
+}
+
+.quickstats img {
+  margin-left: 50px; 
+  width: 130px;
+  margin-right: 40px;
+  margin-top: 0px;
+}
+
+
+
+
+
+
+    </style>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
@@ -119,21 +189,21 @@
    
       <div class='container_stats'>
     
-      <div class='quickstats' style='background-color: white; margin-right: 80px;'>
-    <img src='/docs/media/icons/153-bar-chart-growth-outline.gif' style='margin-left: 50px; width: 130px; '>
-      <span class='number'>".$info['nro_estud']."</span>
+      <div class='quickstats'>
+    <img src='/docs/media/icons/153-bar-chart-growth-outline.gif'>
+      <span>".$info['nro_estud']."</span>
       <p> Inscritas en el patron electoral.</p>
         </div>
      
-    <div class='quickstats' style='background-color: white; margin-right: 80px;'>
-   <img src='/docs/media/icons/17-avatar-man-nodding-outline.gif' style='margin-left: 50px; width: 130px;'>
-    <span class='number'>".$vote_already['already']."</span>
+    <div class='quickstats'>
+   <img src='/docs/media/icons/17-avatar-man-nodding-outline.gif' >
+    <span >".$vote_already['already']."</span>
     <p> Han votado</p>
 </div>
 
-<div class='quickstats' style='background-color: white;'>
-    <img src='/docs/media/icons/69-eye-outline.gif' style='margin-left: 50px; width: 130px;'>
-    <span class='number'>".$vote_left['noready']."</span>
+<div class='quickstats'>
+    <img src='/docs/media/icons/69-eye-outline.gif' >
+    <span>".$vote_left['noready']."</span>
     <p> Ausencia</p>
 </div> 
 
