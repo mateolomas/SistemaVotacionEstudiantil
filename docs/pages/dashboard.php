@@ -15,16 +15,53 @@
 
     <script rel="script" src="../scripts/script.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
+
+   <?php 
+   //votos validos
+    $ans1 = $conn->query("SELECT count(*) as valid_h from infoest inner join _estado_votacion on cedula=id_ced where voto != 'AUN NO VOTA' AND genero='h'");
+    $validh = $ans1->fetch_array();
+
+    $ans2 = $conn->query("SELECT count(*) as valid_m from infoest inner join _estado_votacion on cedula=id_ced where voto != 'AUN NO VOTA' AND genero='m'");
+    $validm = $ans2->fetch_array();
+
+    $ans3 = $conn->query("SELECT count(*) as valid_o from infoest inner join _estado_votacion on cedula=id_ced where voto != 'AUN NO VOTA' AND genero='o'");
+    $valido = $ans3->fetch_array();
+
+    //votos en blanco
+    $ans4 = $conn->query("SELECT count(*) as blank_h from infoest inner join _estado_votacion on cedula=id_ced where voto = 'Blanco' AND genero='h'");
+    $blankh = $ans4->fetch_array();
+
+    $ans5 = $conn->query("SELECT count(*) as blank_m from infoest inner join _estado_votacion on cedula=id_ced where voto = 'Blanco' AND genero='m'");
+    $blankm = $ans5->fetch_array();
+
+    $ans6 = $conn->query("SELECT count(*) as blank_o from infoest inner join _estado_votacion on cedula=id_ced where voto = 'Blanco' AND genero='o'");
+    $blanko = $ans6->fetch_array();
+
+//votos nulos
+
+    $ans7 = $conn->query("SELECT count(*) as nulos_h from infoest inner join _estado_votacion on cedula=id_ced where voto = 'Nulo' AND genero='h'");
+    $nulosh = $ans7->fetch_array();
+
+    $ans8 = $conn->query("SELECT count(*) as nulos_m from infoest inner join _estado_votacion on cedula=id_ced where voto = 'Nulo' AND genero='m'");
+    $nulosm = $ans8->fetch_array();
+
+    $ans9 = $conn->query("SELECT count(*) as nulos_o from infoest inner join _estado_votacion on cedula=id_ced where voto = 'Nulo' AND genero='o'");
+    $nuloso = $ans9->fetch_array();
+
+
+   
+   ?>
+
+<script type="text/javascript">
       google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Year', 'Validos', 'Blanco', 'Nulos'],
-          ['Hombre', 250, 200, 10],
-          ['Mujer', 400, 100, 5],
-          ['Otro', 10, 1, 0]
+          ['Year',  'Validos',                                'Blanco',                              'Nulos'],
+          ['Mujer', <?php echo $validm['valid_m'];?>,        <?php echo $blankm['blank_m'];?>,      <?php echo $nulosm['nulos_m'];?>],
+          ['Hombre', <?php echo $validh['valid_h'];?>,       <?php echo $blankh['blank_h'];?>,      <?php echo $nulosh['nulos_h'];?>],
+          ['Otro',  <?php echo $valido['valid_o'];?>,        <?php echo $blanko['blank_o'];?>,      <?php echo $nuloso['nulos_o'];?>]
           
         ]);
 
@@ -41,23 +78,14 @@
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }
     </script>
+
 </head>
 <body onload="drawChart();">
 
-      <nav class="navbar">
-              <ul class="navbar-nav">
-                <li class="logo"><a class="nav-link" href="#"><img id="ilogo" src="../media/yachay_verde.png"></a></li>
-                <li class="nav-item"><a class="nav-link" href="dashboard.php">     <i class="fas fa-home icons"></i>   <span class="link-text">Dashboard</span>    </a></li>
-                <li class="nav-item"><a class="nav-link" href="candidatos.html">   <i class="fas fa-user-friends icons"></i> <span class="link-text">Candidatos</span>   </a></li>
-                <li class="nav-item"><a class="nav-link" href="votarya.php">       <i class="fas fa-vote-yea icons"></i> <span class="link-text">Vota ya!</span>     </a></li>
-                <li class="nav-item"><a class="nav-link" href="estadisticas.html"> <i class="fas fa-poll icons"></i>     <span class="link-text">Estadisticas</span> </a></li>
-                <li class="nav-item"><a class="nav-link" href="certificado.php">  <i class="far fa-id-card icons"></i>  <span class="link-text">Certificado</span>  </a></li>
-
-                <li class="nav-item"><a class="nav-link" href="usuario.html">  <i class="fas fa-user-circle"></i>  <span class="link-text">Mateo Lomas</span>  </a></li>
-                
-  
-              </ul>
-        </nav>
+      <?php
+          include "barra.php";
+      ?>
+      
 
         <header>
         
@@ -72,14 +100,14 @@
     <?php
     
     
-    $ans = $conn->query("SELECT COUNT(*) as nro_Estud from infoest");
+    $ans = $conn->query("select count(*) as nro_estud from login where clase='Estudiante'");
     $info = $ans->fetch_array();
     
     
-    $votestats = $conn->query("select COUNT(voto) AS already from estado_votacion where VOTO='YA VOTO'");
+    $votestats = $conn->query("select COUNT(voto) AS already from _estado_votacion where VOTO!='AUN NO VOTA'");
     $vote_already = $votestats->fetch_array();
 
-    $voteLEFT = $conn->query("select COUNT(voto) AS noready from estado_votacion where VOTO='AUN NO VOTA'");
+    $voteLEFT = $conn->query("select COUNT(voto) AS noready from _estado_votacion where VOTO='AUN NO VOTA'");
     $vote_left = $voteLEFT->fetch_array();
 
 
@@ -89,7 +117,7 @@
     
       <div class='quickstats'>
     <img src='/docs/media/icons/153-bar-chart-growth-outline.gif'>
-      <span>".$info['nro_Estud']."</span>
+      <span>".$info['nro_estud']."</span>
       <p> Inscritas en el patron electoral.</p>
         </div>
      
@@ -108,6 +136,8 @@
 </div>
 "
     ?>
+
+
 
     <div id="graph">
         <div id="barchart_material"></div>

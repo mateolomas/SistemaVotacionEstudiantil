@@ -3,10 +3,10 @@
 
 require_once 'makecert.php';
 
-
+session_start();
 
 $institucion = ["Universidad de Investigacion y Tecnologia Experimental Yachay", "Junta Electoral"];
-$persona=['Mateo Lomas', '1004295729'];
+$persona=[$_SESSION['name'].' '.$_SESSION['apel'],  $_SESSION['id']];
 $etiquetasPersona=["Hace constar", "Identificado con documento: "];
 $certificacion = ["Elecciones estudiantiles"];
 $etiquetaCert = ["Certifica que el estudiante ha votado satisfactoriamente, y ha cumplido con su obligacion a cabalidad y pecho"];

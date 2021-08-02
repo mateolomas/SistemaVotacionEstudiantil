@@ -21,7 +21,7 @@
     </header>
     
     
-        <div class="contenedor__todo">
+        <main class="contenedor__todo">
 
           
 
@@ -42,33 +42,27 @@
             </div>
         
     
-
+        
+        
         <div id="contenedor__login__register">
-
-            <form action="docs/pages/dashboard.php" id ="Formulario_login">
+            <form action="login.php" method="post">
+                <div id="Formulario_login"> 
                 <h2>Iniciar sesion</h2>
-                <input type="text" placeholder="Correo Electronico">
-                <input type="password" placeholder="Contraseña">
-                <button id="entrar"  >Entrar</button>
-                <button onclick="back()" >Back</button>
-
+                <input type="text" placeholder="Correo Electronico" name="uname" id="usuario">
+                <input type="password" placeholder="Contraseña" name="password" id="passwd">
+                <!--<input id = "entrar" type="submit" value="Ingresar">-->
+                <button id="entrar" type="submit">Entrar</button>
+                <button  >Back</button>
+                </div>   
+                    
             </form>
-
-            <form action="docs/pages/dashboard.php" id="Formulario_register"> 
-                <h2> Actualiza tus datos</h2>
-                <input type="text"  placeholder="Nombre Completo">
-                <input type="text" placeholder="Correo Electronico">
-                <input type="text" placeholder="Usuario">
-                <input type="password" placeholder="Contraseña">
-                <button id ="registrar"> Registrarse</button>
-                <button onclick="back()" >Back</button>
-
-            </form>
+           
+     
 
             </div>
 
            
-      </div>
+        </main>
 
       <footer >
           <div class="footer_container">

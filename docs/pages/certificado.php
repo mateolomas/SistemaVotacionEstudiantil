@@ -18,20 +18,10 @@
 </head>
 <body>
 
-      <nav class="navbar">
-              <ul class="navbar-nav">
-                <li class="logo"><a class="nav-link" href="#"><img id="ilogo" src="../media/yachay_verde.png"></a></li>
-                <li class="nav-item"><a class="nav-link" href="dashboard.php">     <i class="fas fa-home icons"></i>   <span class="link-text">Dashboard</span>    </a></li>
-                <li class="nav-item"><a class="nav-link" href="candidatos.html">   <i class="fas fa-user-friends icons"></i> <span class="link-text">Candidatos</span>   </a></li>
-                <li class="nav-item"><a class="nav-link" href="votarya.php">       <i class="fas fa-vote-yea icons"></i> <span class="link-text">Vota ya!</span>     </a></li>
-                <li class="nav-item"><a class="nav-link" href="estadisticas.html"> <i class="fas fa-poll icons"></i>     <span class="link-text">Estadisticas</span> </a></li>
-                <li class="nav-item"><a class="nav-link" href="certificado.php">  <i class="far fa-id-card icons"></i>  <span class="link-text">Certificado</span>  </a></li>
+<?php
+          include "barra.php";      
+      ?>
 
-                <li class="nav-item"><a class="nav-link" href="usuario.html">  <i class="fas fa-user-circle"></i>  <span class="link-text">Mateo Lomas</span>  </a></li>
-                
-  
-              </ul>
-        </nav>
 
         <header>
         
@@ -56,23 +46,30 @@
 
                 <?php
                     include "conexion_a_bd.php";
-                    $ans = $conn->query("SELECT already_vote FROM estado_votacion where id_est='1004295729'");
+                    session_start();
+                    $ans = $conn->query("SELECT * FROM _estado_votacion where id_ced=".$_SESSION['id']);
                     $info = $ans->fetch_array();
 
                     if($_SERVER["REQUEST_METHOD"]== "POST"){
             
 
+                      if($_SESSION['id'] == $_POST["formced"]){
+                        if($info["voto"] != "AUN NO VOTA") {
+                            echo "Ya voto!";
+                            echo " <form action='certificate/downloadcertificado.php' method='post'>
+                                    <input type='submit' value='Descargar Certificado'>
+                                    </form>";
+                          
+                            }
+                            else{
+                                echo "Aun no vota, o hay un problema";
+                                }
+                      }
+
+                      else {
+                          echo "Esa no es tu cedula";
+                      }
                       
-                      if($info["already_vote"] == 1) {
-                          echo "Ya voto!";
-                          echo " <form action='certificate/downloadcertificado.php' method='post'>
-                                  <input type='submit' value='Descargar Certificado'>
-                                  </form>";
-                        
-                        }
-                  else{
-                    echo "Aun no vota, o hay un problema";
-                  }
                       
                 }
                     ?>
