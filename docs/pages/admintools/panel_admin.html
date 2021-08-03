@@ -5,7 +5,7 @@
     <title>Panel de Admin</title>
     <link rel="stylesheet" href="admin.css" type="text/css" />
     <script rel="script" src="admin.js" type="text/javascript">
-         
+    <link rel="stylesheet" href="../styles/navstyle.css">     
     </script>
 </head>
 
@@ -18,6 +18,7 @@
         <a onclick="actualf()">Actualizar Registros de Estudiantes</a>
         <a onclick="eliminarf()">Eliminar Registros de Estudiantes</a>
         <a onclick="cargarf()">Cargar csv or xml</a>
+        <li class="nav-item"><a class="nav-link" href="../../../../logout.php">  <i class="fas fa-sign-out-alt"></i>  <span class="link-text"> Logout</span>  </a></li>
     </nav>
 
     <main >
@@ -47,12 +48,17 @@
         </div>
 
         <div id="anadir">
-            <form action="admintools/anadir_alumno.php">
+            <form action="admintools/anadir_alumno.php" method="post">
                 <h3>Añadir alumno al patron electoral</h3>
-                <input type="text" placeholder="Cedula/Pasaporte" />
-                <input type="text" placeholder="Nombre" />
-                <input type="text" placeholder="Apellido" />
-                <submit type="submit">Añadir</submit>
+                <input type="text" placeholder="Cedula/Pasaporte" name="ced" />
+                <input type="text" placeholder="Nombre" name="nombre" />
+                <input type="text" placeholder="Apellido" name="apellido" />
+                 Genero <select name="genero"> 
+                <option value="h">hombre</option>
+                <option value="m">mujer</option>
+                <option value="o">otro</option>
+                </select>
+                <submit type="submit" value="Añadir">Añadir </submit>
             </form>
         </div>
 
