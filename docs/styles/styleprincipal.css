@@ -69,7 +69,8 @@ header {
 
 #procced {
     
-    color: rgb(0, 0, 0);
+    color: black;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 10%;
     margin-left: 65%;
     padding: 10%;
@@ -82,7 +83,13 @@ header {
 }
 .botones {
     margin-top: 70px;
+;
 }
+
+
+#loginb {
+	background-color: blue;
+} 
 
 
 .contenedor__todo {
@@ -101,14 +108,11 @@ header {
 	margin-left: 64%;
 	margin-top: -28%;
 	margin-bottom: 20px;
-	
 }
 
 #contenedor__login__register form{
-	
 	margin: 0;
 	width: 100%;
-	
 	background-color: #F0F2FA;
 	padding: 30px 20px;
 	border-radius: 30px

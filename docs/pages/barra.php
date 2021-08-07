@@ -11,7 +11,7 @@
       <li class="nav-item"><a class="nav-link" href="estadisticas.php"> <i class="fas fa-poll icons"></i>     <span class="link-text">Estadisticas</span> </a></li>
 
 
-      <li class="nav-item"><a class="nav-link" href="certificado.php">  <i class="far fa-id-card icons"></i>  <span class="link-text">Certificado</span>  </a></li>
+      
 
 
       <?php 
