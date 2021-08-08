@@ -36,21 +36,21 @@ header {
 
 #welcome {
    
-	margin-top: -60px;
+	margin-top: -40px;
+	margin-left: 20px;
     width: 50%;
     padding: 10%;
-    color: white;
-    font-size: 60px;
-	opacity: 1;
+    color: #161624;
+    font-size: 50px;
+	
 
 }
 
-.butonprincipal {
-    padding: 10px;
-    background-color: black;
-    color: white;
-}
 
+
+.botones {
+    margin-top: 70px;
+}
 
 
 
@@ -58,44 +58,52 @@ header {
 .footer_container {
     
     
-    background-color: #444444;
-	color: white;
+    background-color: #f0f2fac1;
+	color: black;
 	font-size: small;
 	padding: 20px;
-	margin-top: auto
+	margin-top: auto;
+	margin-left: 50px;
 }
 
 
 
 #procced {
     
-    color: black;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+	font-family: sans-serif;
     height: 10%;
     margin-left: 65%;
     padding: 10%;
     margin-top: -35%;
     padding-left: 0;   
+
 }
 
-.butonprincipal:hover {
-    background-color: #46A2FD;   
+#procced:hover {
+	color: #161624;
 }
-.botones {
-    margin-top: 70px;
-;
-}
+
+
 
 
 #loginb {
-	background-color: blue;
+	background-color: rgb(252, 252, 252);
+	color: black;
+	border-radius: 10px;
+	padding: 10px;
+
 } 
 
+#loginb:hover {
+	background-color: #161624;
+	color: white;
+}
 
 .contenedor__todo {
-	background-image: url("../media/yachay/45796359891_89f3821471_o.jpeg");
+	background-image: url("../media/yachay/16767234882_4a1aaac607_k.jpg");
 	
-	background-size: cover;
+	background-size:cover;
 	
 	height: 100%;
 }
@@ -154,10 +162,7 @@ header {
 	display: none;
 }
 
-#Formulario_register{
-	display: none;
+#navcont a {
+	text-decoration: none;
 }
-
-
-
 

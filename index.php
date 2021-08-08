@@ -34,6 +34,9 @@
                 
                 <div class="botones">
                 <span>Selecciona para continuar...</span><br><br>
+                <?php if (isset($_GET['error'])) { ?>
+                    <p style="color: red; font-size: 30px; font-weight: bold"type='text' class="error"><?php echo $_GET['error']; ?></p>
+                <?php } ?>
                 <button class="butonprincipal" id="loginb" onclick="login()" >Iniciar Sesion</button>
                 <!--<button class="butonprincipal" id="signb" onclick="registrarse()">Actualizar Datos</button>-->
                 </div>
@@ -48,14 +51,19 @@
             <form action="login.php" method="post">
                 <div id="Formulario_login"> 
                 <h2>Iniciar sesion</h2>
+
+                
+              
+
                 <input type="text" placeholder="Correo Electronico" name="uname" id="usuario">
                 <input type="password" placeholder="Contraseña" name="password" id="passwd">
                 <!--<input id = "entrar" type="submit" value="Ingresar">-->
                 <button id="entrar" type="submit">Entrar</button>
-                <button  >Back</button>
+                <button type="button" onclick="back()">Regresar</button>
                 </div>   
                     
             </form>
+            
            
      
 
@@ -67,11 +75,12 @@
       <footer >
           <div class="footer_container">
             Contact
-        <nav>
+        <nav id="navcont">
             <ul>
-                <li>Facebbok</li>
-                <li>Twitter</li>
-                <li>Instagram</li>
+                <li><a href="http://facebook.com">Facebbok</a></li>
+                <li><a href="http://twiter.com">Twitter</a></li>
+                <li><a href="http://instagram.com">Instagram</a></li>
+                
                 
             
             </ul>

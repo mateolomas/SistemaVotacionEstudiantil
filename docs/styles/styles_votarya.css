@@ -1,6 +1,8 @@
 
 #containerVoto {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #verificacion input {
@@ -29,4 +31,9 @@
     color: rgb(255, 255, 255);
     background-color: #3ba7ba;
     transform: translateX(400px);
+}
+
+
+.infovot {
+    
 }

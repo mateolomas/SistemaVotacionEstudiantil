@@ -4,15 +4,11 @@
       <li class="nav-item"><a class="nav-link" href="dashboard.php">     <i class="fas fa-home icons"></i>   <span class="link-text">Dashboard</span>    </a></li>
       <li class="nav-item"><a class="nav-link" href="candidatos.php">   <i class="fas fa-user-friends icons"></i> <span class="link-text">Candidatos</span>   </a></li>
 
-      <li class="nav-item"><a class="nav-link" href="cronograma.html">  <i class="fas fa-calendar-alt"></i>  <span class="link-text">Cronograma</span>  </a></li>
+      <li class="nav-item"><a class="nav-link" href="cronograma.php">  <i class="fas fa-calendar-alt"></i>  <span class="link-text">Cronograma</span>  </a></li>
 
 
       <li class="nav-item"><a class="nav-link" href="votarya.php">       <i class="fas fa-vote-yea icons"></i> <span class="link-text">Vota ya!</span>     </a></li>
       <li class="nav-item"><a class="nav-link" href="estadisticas.php"> <i class="fas fa-poll icons"></i>     <span class="link-text">Estadisticas</span> </a></li>
-
-
-      
-
 
       <?php 
       session_start();
@@ -21,7 +17,6 @@
       <li class="nav-item"><a class="nav-link" href="../../../logout.php">  <i class="fas fa-sign-out-alt"></i>  <span class="link-text">Logout</span>  </a></li>
 
       
-
 
 
     </ul>

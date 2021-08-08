@@ -13,20 +13,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6b41f4b4ea.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script rel="script" src="../scripts/jquery-3.6.0.min.js"></script>
+    
     <script rel="script" src="../scripts/script.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
+      
+      var nulos;
+      var lista_1;
+      var lista_2;
+      var blancos;
+
+    function obtener_datos(){
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if(this.readyState==4 && this.status==200){
+			      var oJASON = JSON.parse(this.responseText);
+            nulos=oJASON.nulos;
+            lista_1=oJASON.lista1;
+            lista_2=oJASON.lista2;
+            blancos=oJASON.blancos;
+            }
+    	}
+    
+    xhttp.open("GET","estadistica_voto.php",false);
+    xhttp.send();
+
+}
 
       function drawChart() {
+        obtener_datos()
 
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Lista 1 ',     11],
-          ['Lista 2',      2],
-          ['Ausencia', 4]
+          ['Lista 1 ',     lista_1],
+          ['Lista 2',      lista_2],
+          ['Nulos', nulos],
+          ['Blancos', blancos]
           
         ]);
 
@@ -39,6 +63,7 @@
         chart.draw(data, options);
       }
     </script>
+
 </head>
 <body >
         <?php
@@ -52,15 +77,8 @@
         </header>
         
         <main> 
-        <div id="piechart" style="width: 900px; height: 500px; position: relative; margin-left: 16em;"></div>
+        <div id="piechart" style="width: 900px; height: 500px; position: relative; margin-left: 16em;"> </div>
         </main>
-
-
-
-    
-
-    
-
    
     
 </body>

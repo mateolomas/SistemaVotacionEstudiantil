@@ -15,6 +15,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 	$pass = validate($_POST['password']);
 
 	if (empty($uname)) {
+		
 		header("Location: index.php?error=User Name is required");
 	    exit();
 	}else if(empty($pass)){
@@ -38,7 +39,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 				exit(); 
 			}
 				else {
-					header("Location: docs/pages/admintools/panel_admin.html");	
+					header("Location: docs/pages/admintools/panel_admin.php");	
 					exit();
 				}
             }else{

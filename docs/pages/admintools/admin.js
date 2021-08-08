@@ -4,14 +4,17 @@ function buscarAl() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if(this.readyState == 4 && this.status == 200) {
-            
             oJSON = JSON.parse(this.responseText);
-            document.getElementById("inombre").value = oJSON.nombre;
+            document.getElementById("nombre").value = oJSON.nombre;
+            document.getElementById("apellido").value = oJSON.apellido;
+            document.getElementById("correo").value = oJSON.correo;
+            document.getElementById("password").value = oJSON.password;
+            document.getElementById("voto").value = oJSON.voto;
         }
     
     
     }
-    xhttp.open("GET", "get_stud.php?cd="+document.getElementById("icedula").value, true);
+    xhttp.open("GET", "get_stud.php?cd="+document.getElementById("cedula").value, true);
     xhttp.send();
 
 
@@ -28,7 +31,7 @@ function buscarAl() {
             document.getElementById("leer").style.display = "block";
             document.getElementById("actualizar").style.display = "none";
             document.getElementById("Eliminar").style.display = "none";
-            document.getElementById("cargarExcel").style.display = "none";
+            
           }
 
 function findf () {
@@ -37,7 +40,7 @@ document.getElementById("anadir").style.display = "none";
 document.getElementById("leer").style.display = "none";
 document.getElementById("actualizar").style.display = "none";
 document.getElementById("Eliminar").style.display = "none";
-document.getElementById("cargarExcel").style.display = "none";
+
 
 }
 function anadirf () {
@@ -46,7 +49,7 @@ function anadirf () {
     document.getElementById("leer").style.display = "none";
     document.getElementById("actualizar").style.display = "none";
     document.getElementById("Eliminar").style.display = "none";
-    document.getElementById("cargarExcel").style.display = "none";
+
     
     }
     function actualf () {
@@ -55,7 +58,7 @@ function anadirf () {
         document.getElementById("leer").style.display = "none";
         document.getElementById("actualizar").style.display = "block";
         document.getElementById("Eliminar").style.display = "none";
-        document.getElementById("cargarExcel").style.display = "none";
+
         }
 
         function eliminarf () {
@@ -64,7 +67,7 @@ function anadirf () {
             document.getElementById("leer").style.display = "none";
             document.getElementById("actualizar").style.display = "none";
             document.getElementById("Eliminar").style.display = "block";
-            document.getElementById("cargarExcel").style.display = "none";
+
             }
 
 
@@ -74,7 +77,7 @@ function hidemain () {
             document.getElementById("leer").style.display = "none";
             document.getElementById("actualizar").style.display = "none";
             document.getElementById("Eliminar").style.display = "none";
-            document.getElementById("cargarExcel").style.display = "none";
+
 
 }
 
@@ -85,6 +88,11 @@ function cargarf(){
             document.getElementById("leer").style.display = "none";
             document.getElementById("actualizar").style.display = "none";
             document.getElementById("Eliminar").style.display = "none";
-            document.getElementById("cargarExcel").style.display = "none";
+
 
 }
+
+
+
+
+
